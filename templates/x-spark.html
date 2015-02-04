@@ -61,21 +61,32 @@
         <div class="col-sm-7 left_box">
           <div class="big">
             <img src="/static/img/x-spark/x1.png" class="img-responsive" width="500">
+            <video width="500" id="video">
+              <source src="/static/img/mov/x-spark.mp4" type="video/mp4">
+              Sorry, your browser does not support HTML5 video!
+            </video>
           </div>
-          <!-- <div class="thumbs">
-            <div class="thumb last">
+          <div class="thumbs">
+            <div class="thumb">
               <img src="/static/img/x-spark/x1.png" width="150">
               <a href="#" class="mask">
                 <div class="more">+</div>
               </a>
             </div>
-          </div> -->
+            <div class="thumb last" onClick="runVideo()">
+              <img src="/static/img/x-spark/x1.png" width="150">
+              <a href="#" class="mask">
+                <div class="more" style="margin-left:-5px"><span class="glyphicon glyphicon-play"></span></div>
+              </a>
+            </div>
+          </div>
         </div>
         <div class="col-sm-5 right_box">
           <h2>X-Spark</h2>
-          <p>X-Spark is a 4 player cooperative shooter, where players fend off an alien invasion. The game features a mechanic in which enemies are only vulnerable to a specific player at once. Players must coordinate their attacks in order to defeat alien mother ship.</p>
-          <p>X-Spark was built using Unreal Engine.</p>
+          <p><em>X-Spark</em> is a 4 player cooperative shooter, where players fend off an alien invasion. The game features a mechanic in which enemies are only vulnerable to a specific player at once. Players must coordinate their attacks in order to defeat alien mothership. </p>
+          <p><em>X-Spark</em> was built using <em>Unreal Engine.</em></p>
           <p>As designer / programmer on this project, I implemented color based vulnerability of enemies and obstacles. I also built blueprints responsible for character and barrier spawning, input handling, projectile firing and response.</p>
+          <a href="https://bitbucket.org/karansahu/x-spark">See the code</a>
         </div>
       </div>
     </div>
@@ -126,5 +137,9 @@
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="/static/js/bootstrap.min.js"></script>
   <script src="/static/js/theme.js"></script>
+  <script type="text/javascript">
+  var video = document.getElementById("video");
+  function runVideo () {video.setAttribute("controls","controls");}
+  </script>
 </body>
 </html>
