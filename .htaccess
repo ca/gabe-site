@@ -1,0 +1,13 @@
+<VirtualHost *>
+    ServerName objective-g.nyc
+
+    WSGIDaemonProcess yourapplication user=user1 group=group1 threads=5
+    WSGIScriptAlias / /var/www/gabe-site/gabe-site.wsgi
+
+    <Directory /var/www/gabe-site>
+        WSGIProcessGroup gabe-site
+        WSGIApplicationGroup %{GLOBAL}
+        Order deny,allow
+        Allow from all
+    </Directory>
+</VirtualHost>
